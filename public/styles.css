@@ -66,7 +66,7 @@ input {
 }
 
 
-input:checked + label{/* de alguna forma indica que el hermano siguiente al input que es label le va a ocurrir lo que le diga */
+input:checked + label{
   background-color: red;
   
   scale: 1.1;
@@ -81,7 +81,7 @@ input:checked + label{/* de alguna forma indica que el hermano siguiente al inpu
   margin-top: 20px;
 }
 #seleccionar-ataque{
-  /* display: flex; ya se puso flex en html */
+
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
