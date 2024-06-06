@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html{
+  height: 100%;
+}
+body {
+  font-family: 'Fredoka One', cursive;
+  background-color: #041562;
+  height: 100%; /*cocupa el maximo del contenedor que seria el html*/
+  background-image: url(./assets/pngtree.jpg); /* esto es para pone un fondo */
+  background-repeat: no-repeat;/* hace que si la imagen es pequeña por defecto se repite, esto quita que se repita*/
+  background-position: center center ; /*mueve la imagen al centro ne x y centro en y del contenedor*/
+  background-size: 100% 100%; /*indica de que tamañao dbe ser la imagen*/
+  background-attachment: fixed; /*hace que el fondo este quieto asi haga scroll */
+}
+
+
+
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  
+}  
+ 
+.subtitulo {
+  color: white;
+  font-size: 20px;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+  width: 180px;
+  height: 137px;
+  background: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.tarjetas2{
+  display: inline-block;
+}
+
+.tarjeta-de-mokepon img {
+  width: 80px;
+}
+
+input { 
+  display: none;
+}
+
+
+input:checked + label{/* de alguna forma indica que el hermano siguiente al input que es label le va a ocurrir lo que le diga */
+  background-color: red;
+  
+  scale: 1.1;
+  transition: scale 0.5s;
+  
+}
+
+#boton-mascota{
+  width: 200px;
+  height: 50px;
+  border-radius: 10vi;
+  margin-top: 20px;
+}
+#seleccionar-ataque{
+  /* display: flex; ya se puso flex en html */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+#botones-atack-pok button{
+  width: 200px;
+  height: 50px;
+  border-radius: 10vi;
+}
+.clase-bott{
+  display: flex;
+  justify-content: space-around;
+}
+.ataques{
+  height: 50px;
+  width: 100px;
+  border-radius: 10vi;
+}
+.ataques:hover{
+  scale: 1.1;
+  transition: scale 0.5s;
+}
+
+#boton-reiniciar{
+  width: 200px;
+  height: 50px;
+  border-radius: 10vi;
+  margin-top: 20px;
+}
+#boton-reiniciar:hover{
+  scale: 1.1;
+  transition: scale 0.5s;
+}
+#reiniciar{
+ justify-content: center;
+}
+#mensajes_y_result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#resultado_f{
+  display: flex;
+  background-color: red;
+  width: 150px;
+  height: 50px;
+  border-radius: 10vi;
+  align-items: center;
+  justify-content: center;
+}
+
+#paneles-vs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.info_panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #385cff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10%;
+}
+#ver-mapa{
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+#mapa{
+  border: 5px solid white;
+}
+#ver-mapa button{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+#botones-der-izq{
+  display: flex;
+}
+
+/* aqui se añade especificaciones de disaeño responsivo para cell, para el .clase-bott
+tomamos que la pantalla de cel tiene max un tamño de 360 px  */
+
+@media (max-width: 900px){  /*aqui es mejor tomar el max widt cmo un "hasta ese tamaño"*/
+
+  .tarjetas{
+    display: flex;
+    flex-direction: column;
+  }
+}
+

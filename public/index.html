@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MOKEPON!</title>
+        
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Mokepon</h1>
+
+            <h2 class="subtitulo">Elige tu mascota:</h2>
+
+            <div class="tarjetas" id="mostrar_mokepones">
+                <!-- <input type="radio" name="mascota" id="hipodoge" />
+                <label class="tarjeta-de-mokepon" for="hipodoge">
+                   <div class="tarjetas2">
+                     <p>Hipodoge</p>
+                     <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge">
+                   </div>
+                    
+                </label>
+                
+                
+                </label>
+                <input type="radio" name="mascota" id="capipepo" />
+                <label class="tarjeta-de-mokepon" for="capipepo">
+                    <div class="tarjetas2">
+                        <p>Capipepo</p>
+                        <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Capipepo">
+                    </div>
+                        
+                
+                </label>
+                
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label class="tarjeta-de-mokepon" for="ratigueya">
+                    <div class="tarjetas2">
+                        <p>Ratigueya</p>
+                        <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
+                    </div>
+                 -->
+                
+                
+            </div>
+
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="titulo">Recorre el mapa con tu Mokepon</h1>
+            <canvas id="mapa"></canvas>
+            <button onmousedown="moverMokeponArriba()" ontouchstart="moverMokeponArriba()"  onmouseup="detenerMov()" ontouchend="detenerMov()">Arriba</button> 
+            <div id="botones-der-izq">
+                <button onmousedown="moverMokeponIzquierda()" ontouchstart="moverMokeponIzquierda()" onmouseup="detenerMov()" ontouchend="detenerMov()" >Izquierda</button>
+                <button onmousedown="moverMokeponDerecha()" ontouchstart="moverMokeponDerecha()" onmouseup="detenerMov()" ontouchend="detenerMov()" >Derecha</button>
+            </div>
+            <button onmousedown="moverMokeponAbajo()" ontouchstart="moverMokeponAbajo()" onmouseup="detenerMov()" ontouchend="detenerMov()" >Abajo</button>
+            
+            <h5>Nota: puedes usar las felchas de tu teclado  </h5>
+            <!-- dejo este buton de prueba para mostrar como ejecutar funcion ante evento onclick -->
+            <!-- <button onclick="moverMokeponArriba()">Arriba</button>  -->
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">MOKEPON! 🔥💧🌱</h1>
+
+            <h2>Elige tu ataque:</h2>
+            <p id="botones-atack-pok">
+                    <div class="clase-bott" id="area_botones">
+                    <!-- <button id="boton-fuego" class="ataques">Fuego 🔥</button>
+                    <button id="boton-agua" class="ataques">Agua 💧</button>
+                    <button id="boton-tierra" class="ataques">Tierra 🌱</button>     -->
+                </div>
+            </p>
+            <div id="mensajes_y_result">
+                <section id="mensajes">  
+                </section>
+                <div id="resultado_f">
+                    <p>Mucha suerte !!</p>
+                </div>
+                
+
+                <section id="reiniciar">
+
+                    <button id="boton-reiniciar">Reiniciar</button>               
+    
+                </section>
+
+
+            </div>  
+                            
+            <div id="paneles-vs">
+                <div class="info_panel">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p> 
+                    <div id="ataqueDelJugador">
+                    </div>   
+                </div>
+                <!-- <p>-----------</p> -->
+                <div class="info_panel" >
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p> 
+                    <div id="ataqueDelEnemigo">
+                    </div>   
+    
+                </div>
+            </div>
+            
+
+            <!-- <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p> -->
+
+            
+        </section>
+
+        
+
+        <script src="./mokepon.js"></script>
+
+    </body>
+</html>
